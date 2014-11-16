@@ -12,7 +12,7 @@ Install docker on your system. for the restart feature you need at least docker 
 
 This fetches the image (if you haven't already done that)
 ```
-docker run --restart=always --name bepasty -p 5000:5000 -v /opt/bepasty:/srv/bepasty asmaps/bepasty
+docker run -d --restart=always --name bepasty -p 5000:5000 -v /opt/bepasty:/srv/bepasty asmaps/bepasty
 ```
 
 **Stop the server**
