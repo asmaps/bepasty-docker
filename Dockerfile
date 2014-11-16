@@ -5,6 +5,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y python3-pip
 RUN pip3 install bepasty gunicorn gevent
 
 VOLUME /srv/bepasty
+ENV BEPASTY_CONFIG /srv/bepasty/bepasty.conf
 EXPOSE 5000
 
 ENTRYPOINT gunicorn bepasty.wsgi
