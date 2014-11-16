@@ -30,3 +30,14 @@ running
 ```
 docker start bepasty
 ```
+
+**Updating**
+
+To update you need to stop and delete the container (data is stored on the host, so it shouldn't be lost), then fetch
+the new image and recreate the container:
+```
+docker stop bepasty
+docker rm bepasty
+docker pull asmaps/bepasty
+docker run -d --restart=always --name bepasty -p 5000:5000 -v /opt/bepasty:/srv/bepasty asmaps/bepasty
+```
