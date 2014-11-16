@@ -10,10 +10,12 @@ Install docker on your system. for the restart feature you need at least docker 
 
 **First start/"setup"**
 
-This fetches the image (if you haven't already done that)
+This fetches the image (if you haven't already done that) and creates a container.
 ```
 docker run -d --restart=always --name bepasty -p 5000:5000 -v /opt/bepasty:/srv/bepasty asmaps/bepasty
 ```
+After startup you should have the config file located in /opt/bepasty/bepasty.conf  
+Adjust it to your needs and restart the server.
 
 **Stop the server**
 
